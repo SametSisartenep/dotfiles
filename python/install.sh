@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-wget https://bootstrap.pypa.io/get-pip.py
+if type pip &>/dev/null; then
+  exit 0
+else
+  if [ -f get-pip.py ]; then
+    echo "You just have get-pip downloaded."
+  else
+    wget https://bootstrap.pypa.io/get-pip.py
+  fi
+fi
 
 sudo -v
 
