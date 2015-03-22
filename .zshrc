@@ -89,15 +89,15 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH="$HOME/Documentos/node-dev/mongodb/bin:$PATH"
+export PATH="$HOME/tools/mongodb/bin:$PATH"
 
 export PATH="/usr/local/go/bin:$PATH"
 
 # LLVM Path
-export PATH="$HOME/Documentos/llvm-dev/llvm/build/Release+Asserts/bin:$PATH"
+export PATH="$HOME/tools/llvm/build/Release+Asserts/bin:$PATH"
 
 # Google Depot Tools
-export PATH="$HOME/Documentos/v8-engine-dev/depot_tools:$PATH"
+export PATH="$HOME/tools/depot_tools:$PATH"
 
 # V8 Engine
-export PATH="$HOME/Documentos/v8-engine-dev/v8/out/x64.release:$PATH"
+export PATH="$HOME/tools/v8/out/x64.release:$PATH"
