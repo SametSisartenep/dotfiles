@@ -11,3 +11,11 @@ for file in ${FILES[@]}; do
 done
 
  ./python/install.sh
+ ./nodejs-fetcher 0.12.0
+
+ tar xvf *.tar.gz
+ rm -rfv *.tar.gz
+ cd v0.12.0*
+ ./configure && make && sudo make install
+
+ sudo npm update -g

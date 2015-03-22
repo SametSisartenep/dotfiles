@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+print_installed () {
+  echo -e "\x1b[1;36m$1\x1b[0m \x1b[0;32m✓ - installed\x1b[0m"
+}
+
+print_not_installed () {
+  echo -e "\x1b[1;36m$1\x1b[0m \x1b[0;31m✘ - not installed\x1b[0m"
+  exit 1
+}
+
+check_dependencies () {
+  programs=( node wget curl )
+  for program in ${programs[@]}
+  do
+    if type $program &>/dev/null; then
+      print_installed $program
+    else
+      if [ $program == "node" ]; then
+        if type iojs &>/dev/null; then
+          print_installed $program
+          nodejs='iojs'
+        else
+          print_not_installed $program
+        fi
+      else
+        print_not_installed $program
+      fi
+    fi
+  done
+}
+
+download_it () {
+  echo -e "\x1b[1;37mSelected version:\x1b[0m \x1b[0;32m${1}\x1b[0m"
+  url="https://github.com/joyent/node/archive/v${1}.tar.gz"
+  echo -e "\x1b[1;37mDowloading: \x1b[0;34m${url}\x1b[0m"
+  wget $url
+}
+
+nodejs='node'
+
+check_dependencies
+
+if [[ $1 == "versions" ]]; then
+  versions=`curl -s https://api.github.com/repos/joyent/node/tags`
+  node -e "${versions}.map(function(version){console.log(version.name);});"
+  exit 0
+else
+  release=$1
+fi
+
+if [ $release ]; then
+  if [[ $release =~ ^[0-9][.][0-9][.][0-9]$ ]]; then
+    download_it $release
+  else
+    release=`${nodejs} -e "console.log('${release}'.match(/[0-9][.][0-9][.][0-9]/g)[0]);"`
+    download_it $release
+  fi
+else
+  echo -e "\x1b[1;31mNo version specified.\x1b[0m"
+  echo -e "Do you want to fetch the \x1b[1;35mlatest\x1b[0m version?"
+  read option
+
+  case $option in
+    "yes"|"y"|"Y")
+      versions=`curl -s https://api.github.com/repos/joyent/node/tags`
+      release=`${nodejs} -e "console.log((${versions})[0].name.match(/[0-9][.][0-9][.][0-9]/g)[0])"`
+      download_it $release
+      ;;
+    *)
+      echo "Bye :)"
+      exit 0
+      ;;
+  esac
+fi
