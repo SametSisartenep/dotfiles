@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILES=( .fonts .nvm .rbenv .oh-my-zsh .vim .vimrc .vimrc-global .zshrc .jshint )
+FILES=( .fonts .nvm .rbenv .oh-my-zsh .vim .vimrc .vimrc-global .zshrc .jshintrc )
 
 for file in ${FILES[@]}; do
   if [[ $file == ".vimrc-global" ]]; then
