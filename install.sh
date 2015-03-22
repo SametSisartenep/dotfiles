@@ -15,7 +15,7 @@ done
 
  tar xvf *.tar.gz
  rm -rfv *.tar.gz
- cd v0.12.0*
+ cd *0.12.0
  ./configure && make && sudo make install
 
  sudo npm update -g
