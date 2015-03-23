@@ -27,5 +27,5 @@ else
   cd *0.12.0
   ./configure && make && sudo make install
 
-  sudo npm update -g && sudo npm install -g jshint
+  sudo npm update -g && ./npm/setup.sh
 fi
