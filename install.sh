@@ -25,7 +25,7 @@ else
   rm -rfv *.tar.gz
 
   cd *0.12.0
-  ./configure && make && sudo make install
+  ./configure && make -j4 && sudo make install
 
   sudo npm update -g && ./npm/setup.sh
 fi

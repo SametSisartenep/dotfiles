@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+bring_from_mirror () {
+  LLVM_MIRROR="https://github.com/llvm-mirror/"
+
+  git clone ${LLVM_MIRROR}${1}.git
+}
+
 setup_clang () {
   LLVM_DEV_DIR=$HOME/tools/
   LLVM_DIR=$LLVM_DEV_DIR/llvm
@@ -11,19 +17,19 @@ setup_clang () {
   cd $LLVM_DEV_DIR
 
   # checkout LLVM
-  svn co http://llvm.org/svn/llvm-project/llvm/trunk llvm
+  bring_from_mirror llvm
 
   # checkout Clang
   cd $LLVM_TOOLS_DIR
-  svn co http://llvm.org/svn/llvm-project/cfe/trunk clang
+  bring_from_mirror clang
 
-  # checkout Extra Clang Tools
+  # checkout Clang Extra Tools
   cd $CLANG_TOOLS_DIR
-  svn co http://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra
+  bring_from_mirror clang-tools-extra
 
   # checkout Compiler-RT
   cd $LLVM_PROJECTS_DIR
-  svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
+  bring_from_mirror compiler-rt
 
   # build LLVM and Clang
   mkdir $LLVM_DIR/build
@@ -33,9 +39,9 @@ setup_clang () {
 
 }
 
-if type svn &>/dev/null; then
+if type git &>/dev/null; then
   setup_clang
 else
-  echo "SVN is not installed."
+  echo -e "Git is not installed.\nTry apt-get install/pacman -S (git git-core)"
   exit 1
 fi
