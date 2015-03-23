@@ -17,6 +17,20 @@ My dotfiles -- zsh . vim . rbenv . nvm
 
 `~$ ./v8/setup.sh`
 
+## setup Go
+
+`~$ ./go/setup.sh`
+
+## setup NPM (packages)
+
+`~$ ./npm/setup.sh`
+
+> **Why so much _setup_ files?**
+>
+> I'm going to design a **Makefile** to handle all that configuration, but, so
+> far, I'm just building the esqueleton, so you must execute every _setup_ file in
+> order to setup every tool.
+
 ## LICENSE
 MIT License (MIT)
 
