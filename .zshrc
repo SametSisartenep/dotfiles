@@ -91,7 +91,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/tools/mongodb/bin:$PATH"
 
-export PATH="/usr/local/go/bin:$PATH"
+# Go Path
+export GOROOT="$HOME/tools/go"
+export PATH="$GOROOT/bin:$PATH"
 
 # LLVM Path
 export PATH="$HOME/tools/llvm/build/Release+Asserts/bin:$PATH"
