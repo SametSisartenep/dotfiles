@@ -1,0 +1,30 @@
+#openbox themerc edited with obtheme
+border.color: #18CAE6
+border.width: 2
+window.active.button.hover.image.color: #FFFFFF
+window.active.button.unpressed.bg: Solid Flat
+window.active.button.unpressed.bg.color: #18CAE6
+window.active.button.unpressed.image.color: #000000
+window.active.button.pressed.bg: Flat
+window.active.button.pressed.bg.color: #537797
+window.active.client.color: #000000
+window.active.label.bg: Solid Flat Border
+window.active.label.bg.color: #18CAE6
+window.active.label.bg.border.color: #000000
+window.active.label.text.color: #000000
+window.active.title.bg: Solid Flat Border
+window.active.title.bg.color: #000000
+window.active.title.bg.border.color: #000000
+window.inactive.button.hover.image.color: #FFFFFF
+window.inactive.button.unpressed.bg: Solid Flat Border
+window.inactive.button.unpressed.bg.color: #18CAE6
+window.inactive.button.unpressed.bg.border.color: #18CAE6
+window.inactive.button.unpressed.image.color: #000000
+window.inactive.client.color: #000000
+window.inactive.label.bg: Solid Flat Border
+window.inactive.label.bg.color: #18CAE6
+window.inactive.label.bg.border.color: #000000
+window.inactive.label.text.color: #005980
+window.inactive.title.bg: Solid Flat Border
+window.inactive.title.bg.color: #000000
+window.inactive.title.bg.border.color: #000000
