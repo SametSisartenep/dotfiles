@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-if type pip &>/dev/null; then
-  exit 0
-else
+if -n type pip &>/dev/null; then
   if [ -f get-pip.py ]; then
     echo "You just have get-pip downloaded."
   else

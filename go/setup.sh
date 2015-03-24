@@ -7,9 +7,7 @@ if type go &>/dev/null; then
 else
   wget https://storage.googleapis.com/golang/go${version}.linux-amd64.tar.gz
 
-  if [ -d $HOME/tools ]; then
-    true
-  else
+  if [ ! -d $HOME/tools ]; then
     mkdir -p $HOME/tools
   fi
 

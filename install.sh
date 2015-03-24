@@ -13,11 +13,7 @@ done
  ./python/install.sh
 
 if type node &>/dev/null; then
-  if type jshint &>/dev/null; then
-    exit 0
-  else
-    sudo npm install -g jshint
-  fi
+  ./npm/setup.sh
 else
   ./nodejs-fetcher 0.12.0
 
