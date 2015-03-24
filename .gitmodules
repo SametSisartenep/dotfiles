@@ -58,3 +58,6 @@
 [submodule "shen/games/sed-scripts"]
 	path = shen/games/sed-scripts
 	url = git@github.com:aureliojargas/sed-scripts.git
+[submodule "git-extras"]
+	path = git-extras
+	url = https://github.com/tj/git-extras.git
