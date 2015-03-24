@@ -1,4 +1,4 @@
-# SametSisartenep's dotfiles
+![dotfiles logo](dotfiles-logo.png)
 
 My dotfiles -- zsh . vim . rbenv . nvm
 
@@ -25,7 +25,7 @@ My dotfiles -- zsh . vim . rbenv . nvm
 
 `~$ ./npm/setup.sh`
 
-> **Why so much _setup_ files?**
+> **Why so many _setup_ files?**
 >
 > I'm going to design a **Makefile** to handle all that configuration, but, so
 > far, I'm just building the esqueleton, so you must execute every _setup_ file in
