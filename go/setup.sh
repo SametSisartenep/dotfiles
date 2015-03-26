@@ -11,7 +11,7 @@ else
     mkdir -p $HOME/tools
   fi
 
-  tar -C $HOME/tools/go -xzf go${version}.linux-amd64.tar.gz
+  tar -C $HOME/tools/ -xzf go${version}.linux-amd64.tar.gz
 
   rm -rfv go${version}.linux-amd64.tar.gz
 fi
