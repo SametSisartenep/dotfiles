@@ -46,18 +46,6 @@
 [submodule ".vim/bundle/vim-syntax-extra"]
 	path = .vim/bundle/vim-syntax-extra
 	url = https://github.com/justinmk/vim-syntax-extra.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".nvm"]
-	path = .nvm
-	url = https://github.com/creationix/nvm.git
-[submodule ".rbenv"]
-	path = .rbenv
-	url = https://github.com/sstephenson/rbenv.git
 [submodule "shen/games/sed-scripts"]
 	path = shen/games/sed-scripts
 	url = git@github.com:aureliojargas/sed-scripts.git
-[submodule "git-extras"]
-	path = git-extras
-	url = https://github.com/tj/git-extras.git
