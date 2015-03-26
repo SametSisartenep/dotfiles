@@ -9,21 +9,19 @@ My dotfiles -- zsh . vim . rbenv . nvm
 2. Install
   - `~$ cd dotfiles && ./install.sh`
 
-## setup LLVM + Clang
+> *Recursive installation* is still needed because of Vim modules.
 
-`~$ ./clang/setup.sh`
+## _Setup.sh_ files
 
-## setup V8 + Google Depot Tools
-
-`~$ ./v8/setup.sh`
-
-## setup Go
-
-`~$ ./go/setup.sh`
-
-## setup NPM (packages)
-
-`~$ ./npm/setup.sh`
+- clang/setup.sh
+- v8/setup.sh
+- npm/setup.sh
+- nvm/setup.sh
+- rbenv/setup.sh
+- oh-my-zsh/setup.sh
+- go/setup.sh
+- qemu/setup.sh
+- git-extras-tj/setup.sh
 
 > **Why so many _setup_ files?**
 >
