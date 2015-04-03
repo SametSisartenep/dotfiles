@@ -79,9 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Keyboard layout es_ES
-setxkbmap es
-
 alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias get_window_geometry="xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"

@@ -1,0 +1,19 @@
+# increase volume
+"pulseaudio-ctl up"
+  XF86AudioRaiseVolume
+
+# decrease volume
+"pulseaudio-ctl down"
+  XF86AudioLowerVolume
+
+# mute sound (toggling)
+"pulseaudio-ctl mute"
+  XF86AudioMute
+
+# increase brightness
+"xbacklight -inc 5"
+  XF86MonBrightnessUp
+
+# decrease brightness
+"xbacklight -dec 5"
+  XF86MonBrightnessDown
