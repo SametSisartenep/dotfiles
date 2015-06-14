@@ -1,4 +1,5 @@
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/
+set formatoptions+=t
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -17,6 +18,7 @@ let g:syntastic_cpp_compiler_options=' -std=c++11'
 let g:syntastic_c_compiler_options=' -std=c11'
 
 let NERDTreeShowHidden=1
+let g:NERDTreeWinSize=25
 
 set listchars=trail:·,extends:>,precedes:<,tab:▸\ ,eol:¬
 set list!
@@ -32,7 +34,7 @@ nmap <C-N><C-N> :set invnumber<CR>
 set laststatus=2
 set showmode
 set t_Co=256
-set textwidth=80
+set tw=76
 
 set background=dark
 " SOLARIZED
