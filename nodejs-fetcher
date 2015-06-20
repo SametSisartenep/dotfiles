@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ $1 ]; then
-  wget https://github.com/joyent/node/archive/v${1}.tar.gz
-  exit 0
-else
-  echo "NO version specified."
-  exit 1
-fi

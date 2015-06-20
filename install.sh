@@ -9,19 +9,3 @@ for file in ${FILES[@]}; do
     cp -R $file $HOME/
   fi
 done
-
- ./python/install.sh
-
-if type node &>/dev/null; then
-  ./npm/setup.sh
-else
-  ./nodejs-fetcher 0.12.0
-
-  tar xvf *.tar.gz
-  rm -rfv *.tar.gz
-
-  cd *0.12.0
-  ./configure && make -j4 && sudo make install
-
-  sudo npm update -g && ./npm/setup.sh
-fi
