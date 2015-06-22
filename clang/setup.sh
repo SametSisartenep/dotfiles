@@ -7,11 +7,11 @@ bring_from_mirror () {
 }
 
 setup_clang () {
-  LLVM_DEV_DIR=$HOME/tools/
+  LLVM_DEV_DIR=$HOME/tools
   LLVM_DIR=$LLVM_DEV_DIR/llvm
-  LLVM_TOOLS_DIR=$LLVM_DIR/tools/
-  LLVM_PROJECTS_DIR=$LLVM_DIR/projects/
-  CLANG_TOOLS_DIR=$LLVM_TOOLS_DIR/clang/tools/
+  LLVM_TOOLS_DIR=$LLVM_DIR/tools
+  LLVM_PROJECTS_DIR=$LLVM_DIR/projects
+  CLANG_TOOLS_DIR=$LLVM_TOOLS_DIR/clang/tools
 
   mkdir -p $LLVM_DEV_DIR
   cd $LLVM_DEV_DIR
