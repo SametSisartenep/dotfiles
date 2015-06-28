@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
-alias get_window_geometry="xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
+alias get_window_geometry="xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF} 2> /dev/null')"
 
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
