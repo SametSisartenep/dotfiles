@@ -1,11 +1,11 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.32 for samet on Fri Mar 27 03:28:46 2015.
+# Written by xscreensaver-demo 5.32 for samet on Thu Jul  2 03:04:00 2015.
 # http://www.jwz.org/xscreensaver/
 
-timeout:	0:20:00
-cycle:		0:20:00
-lock:		False
-lockTimeout:	0:00:00
+timeout:	2:00:00
+cycle:		2:00:00
+lock:		True
+lockTimeout:	2:00:00
 passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
@@ -25,17 +25,17 @@ captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
 dpmsEnabled:	True
-dpmsQuickOff:	False
+dpmsQuickOff:	True
 dpmsStandby:	2:00:00
 dpmsSuspend:	2:00:00
 dpmsOff:	4:00:00
-grabDesktopImages:  True
+grabDesktopImages:  False
 grabVideoFrames:    False
-chooseRandomImages: False
-imageDirectory:	
+chooseRandomImages: True
+imageDirectory:	/home/samet/Imágenes/nasa_stickers
 
-mode:		one
-selected:	143
+mode:		blank
+selected:	173
 
 textMode:	file
 textLiteral:	XScreenSaver
