@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILES=( .fonts .themes .vim .vimrc .vimrc-global .zshrc .jshintrc )
+FILES=( .fonts .themes .vim .vimrc .vimrc-global .zshrc .tmux.conf .jshintrc )
 XORGSYSFILES=( 20-intel.conf 52-elantech-touchpad.conf )
 XORGUSRFILES=( .drirc .xbindkeysrc .xinitrc .xscreensaver )
 
