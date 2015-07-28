@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="linuxonly"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,6 +54,8 @@ plugins=(git vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
+setopt CORRECT
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -83,7 +85,9 @@ alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
-export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+export TERM=xterm-256color
+
+export LD_LIBRARY_PATH="/usr/local/lib/samet:$LD_LIBRARY_PATH"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

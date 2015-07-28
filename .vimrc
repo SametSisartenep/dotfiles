@@ -38,7 +38,23 @@ set tw=76
 
 set background=dark
 " SOLARIZED
-let g:solarized_termcolors=256
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
-colorscheme solarized
+"let g:solarized_termcolors=256
+"let g:solarized_visibility="high"
+"let g:solarized_contrast="high"
+"colorscheme solarized
+
+" RAILSCASTS
+colorscheme railscasts
+
+" C64
+"colorscheme C64
+
+" INORI
+"colorscheme inori
+
+" MATRIX
+"colorscheme greenvision
+
+" BASE16
+"let base16colorspace=256
+"colorscheme base16-default
