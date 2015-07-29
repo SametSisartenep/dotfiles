@@ -45,4 +45,4 @@ This file is going to copy the config files listed below:
 
 ## LICENSE
 
-[![License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)](http://opensource.org/licenses/BSD-3-Clause)
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
