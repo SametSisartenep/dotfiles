@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dotfiles by SametSisartenep</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Dotfiles</h1>
+      <h2 class="project-tagline">My dotfiles and sysconfig files - vim, zsh, tmux, git, rbenv, nvm, go, etc.</h2>
+      <a href="https://github.com/SametSisartenep/dotfiles" class="btn">View on GitHub</a>
+      <a href="https://github.com/SametSisartenep/dotfiles/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/SametSisartenep/dotfiles/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="dotfiles-logo.png" alt="dotfiles logo"></p>
+
+<p>My dotfiles and sysconfig files - vim, zsh, tmux, git, rbenv, nvm, go, etc.</p>
+
+<blockquote>
+<p><strong>NOTE:</strong>
+Most of the config files are based on Arch Linux.</p>
+</blockquote>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>Clone the repo:</p>
+
+<p><code>~$ git clone https://github.com/SametSisartenep/dotfiles.git</code></p>
+
+<blockquote>
+<p><strong>Make</strong> sure you have <code>make</code> on your system ;-)</p>
+</blockquote>
+
+<p>Apply the options following the command below.</p>
+
+<p><code>~$ make [option]</code></p>
+
+<p>Setup Options:</p>
+
+<ul>
+<li>
+<code>base</code> <em>// Base configuration files.</em>
+</li>
+<li>
+<code>xorg-sys</code> <em>// Xorg system wide config files.</em>
+</li>
+<li>
+<code>xorg-usr</code> <em>// Xorg user config files.</em>
+</li>
+<li>
+<code>xorg</code> <em>// Intalls system + user config files.</em>
+</li>
+<li>
+<code>clang</code> <em>// LLVM + Clang setup.</em>
+</li>
+<li>
+<code>llvm-clang</code> <em>// LLVM + Clang setup.</em>
+</li>
+<li>
+<code>git-extras-tj</code> <em>// Git extras (By <a href="https://github.com/tj" class="user-mention">@tj</a>) setup.</em>
+</li>
+<li>
+<code>git-extras</code> <em>// Shortcut to <strong>git-extras-tj</strong>.</em>
+</li>
+<li>
+<code>git</code> <em>// Shorcut to <strong>git-extras-tj</strong>.</em>
+</li>
+<li>
+<code>go</code> <em>// Go setup.</em>
+</li>
+<li>
+<code>msf</code> <em>// Metasploit Framework database config file.</em>
+</li>
+<li>
+<code>npm</code> <em>// NPM modules installation.</em>
+</li>
+<li>
+<code>nvm</code> <em>// NVM setup.</em>
+</li>
+<li>
+<code>oh-my-zsh</code> <em>// oh-my-zsh Framework setup.</em>
+</li>
+<li>
+<code>python</code> <em>// Python pip -&gt; powerline + virtualenv setup.</em>
+</li>
+<li>
+<code>qemu</code> <em>// Qemu setup.</em>
+</li>
+<li>
+<code>rbenv</code> <em>// rbenv ruby (2.2.2) setup.</em>
+</li>
+<li>
+<code>v8</code> <em>// V8 Engine setup.</em>
+</li>
+</ul>
+
+<h1>
+<a id="some-info-about-the-config-files" class="anchor" href="#some-info-about-the-config-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some info about the config files.</h1>
+
+<p><strong>Base</strong> config files (System Independent)</p>
+
+<ul>
+<li>
+<code>.fonts</code> <em>// Personal collection of fonts.</em>
+</li>
+<li>
+<code>.themes</code> <em>// GTK2, GTK3 themes.</em>
+</li>
+<li>
+<code>.vim</code> <em>// Vim infrastructure directory (include Pathogen + Mods).</em>
+</li>
+<li>
+<code>.vimrc</code> <em>// Vim config file.</em>
+</li>
+<li>
+<code>.vimrc-global</code> <em>// Vim global config file (copied to /etc/vimrc).</em>
+</li>
+<li>
+<code>.zshrc</code> <em>// Zsh config file (custom ENV variables + aliases).</em>
+</li>
+<li>
+<code>.tmux.conf</code> <em>// Tmux config file.</em>
+</li>
+<li>
+<code>.jshintrc</code> <em>// JSHint code style spec file.</em>
+</li>
+</ul>
+
+<p><strong>Xorg</strong> config files (System Dependent)</p>
+
+<ul>
+<li>
+<code>20-intel.conf</code> <em>// Enables Tear Free Intel graphics option.</em>
+</li>
+<li>
+<code>52-elantech-touchpad.conf</code> <em>// Detailed spec for the touchpad.</em>
+</li>
+<li>
+<code>.drirc</code> <em>// Disables VSync, so you use Intel Triple Buffering.</em>
+</li>
+<li>
+<code>.xbindkeysrc</code> <em>// Keyboard shortcuts config.</em>
+</li>
+<li>
+<code>.xinitrc</code> <em>// Xorg init file. Based on LXDE</em>
+</li>
+<li>
+<code>.xscreensaver</code> <em>// Screensaver preferences file.</em>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h2>
+
+<p><a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="License"></a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/SametSisartenep/dotfiles">Dotfiles</a> is maintained by <a href="https://github.com/SametSisartenep">SametSisartenep</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
