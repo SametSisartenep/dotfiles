@@ -11,7 +11,7 @@ Clone the repo:
 
 `~$ git clone https://github.com/SametSisartenep/dotfiles.git`
 
-> Make sure you have `make` on your system ;-)
+> **Make** sure you have `make` on your system ;-)
 
 Apply the options following the command below.
 
@@ -19,24 +19,24 @@ Apply the options following the command below.
 
 Setup Options:
 
-- base _// Base configuration files._
-- xorg-sys _// Xorg system wide config files._
-- xorg-usr _// Xorg user config files._
-- xorg _// Intalls system + user config files._
-- clang _// LLVM + Clang setup._
-- llvm-clang _// LLVM + Clang setup._
-- git-extras-tj _// Git extras (By @tj) setup._
-- git-extras _// Shortcut to **git-extras-tj**._
-- git _// Shorcut to **git-extras-tj**._
-- go _// Go setup._
-- msf _// Metasploit Framework database config file._
-- npm _// NPM modules installation._
-- nvm _// NVM setup._
-- oh-my-zsh _// oh-my-zsh Framework setup._
-- python _// Python pip -> powerline + virtualenv setup._
-- qemu _// Qemu setup._
-- rbenv _// rbenv ruby (2.2.2) setup._
-- v8 _// V8 Engine setup._
+- `base` _// Base configuration files._
+- `xorg-sys` _// Xorg system wide config files._
+- `xorg-usr` _// Xorg user config files._
+- `xorg` _// Intalls system + user config files._
+- `clang` _// LLVM + Clang setup._
+- `llvm-clang` _// LLVM + Clang setup._
+- `git-extras-tj` _// Git extras (By @tj) setup._
+- `git-extras` _// Shortcut to **git-extras-tj**._
+- `git` _// Shorcut to **git-extras-tj**._
+- `go` _// Go setup._
+- `msf` _// Metasploit Framework database config file._
+- `npm` _// NPM modules installation._
+- `nvm` _// NVM setup._
+- `oh-my-zsh` _// oh-my-zsh Framework setup._
+- `python` _// Python pip -> powerline + virtualenv setup._
+- `qemu` _// Qemu setup._
+- `rbenv` _// rbenv ruby (2.2.2) setup._
+- `v8` _// V8 Engine setup._
 
 # Some info about the config files.
 
