@@ -68,7 +68,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # Linking flags
-export LD_LIBRARY_PATH="/usr/local/lib/samet:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -87,7 +87,7 @@ alias rmhard='rm -rfv'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 # Default Terminal
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # Rbenv setup
 export PATH="$HOME/.rbenv/bin:$PATH"
