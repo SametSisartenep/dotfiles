@@ -20,10 +20,10 @@ ZSH_THEME="linuxonly"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -54,20 +54,21 @@ plugins=(git vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-setopt CORRECT
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# Linking flags
+export LD_LIBRARY_PATH="/usr/local/lib/samet:$LD_LIBRARY_PATH"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -85,10 +86,10 @@ alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
+# Default Terminal
 export TERM=xterm-256color
 
-export LD_LIBRARY_PATH="/usr/local/lib/samet:$LD_LIBRARY_PATH"
-
+# Rbenv setup
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
@@ -96,6 +97,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# MongoDB path
 export PATH="$HOME/tools/mongodb/bin:$PATH"
 
 # Go Path
