@@ -111,11 +111,5 @@ export PATH="$HOME/tools/mongodb/bin:$PATH"
 export GOROOT="$HOME/tools/go"
 export PATH="$GOROOT/bin:$PATH"
 
-# LLVM Path
-export PATH="$HOME/tools/llvm/build/Release+Asserts/bin:$PATH"
-
 # Google Depot Tools
 export PATH="$HOME/tools/depot_tools:$PATH"
-
-# V8 Engine
-export PATH="$HOME/tools/v8/out/x64.release:$PATH"
