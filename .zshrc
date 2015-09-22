@@ -109,7 +109,8 @@ export PATH="$HOME/tools/mongodb/bin:$PATH"
 
 # Go Path
 export GOROOT="$HOME/tools/go"
-export PATH="$GOROOT/bin:$PATH"
+export GOPATH=$HOME/projects/go
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # Google Depot Tools
 export PATH="$HOME/tools/depot_tools:$PATH"
