@@ -1,0 +1,28 @@
+[global_config]
+  title_inactive_bg_color = "#000000"
+  title_inactive_fg_color = "#00ffff"
+  title_receive_bg_color = "#000000"
+  title_receive_fg_color = "#14ff00"
+  title_transmit_bg_color = "#000000"
+  title_transmit_fg_color = "#00ffff"
+[keybindings]
+  help = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_color = "#0f2134"
+    background_image = None
+    cursor_color = "#4fb644"
+    font = Hack 10.5
+    foreground_color = "#b2c6cd"
+    scrollbar_position = hidden
+    use_system_font = False
