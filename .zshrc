@@ -93,6 +93,9 @@ alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_
 # export QT_IM_MODULE=ibus
 # ibus-daemon -drx
 
+# screenshots folder
+PICTURES=/home/samet/Imágenes/screenshots
+
 # Default Terminal
 export TERM=screen-256color
 
