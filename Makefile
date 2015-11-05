@@ -10,7 +10,7 @@ BASE=.fonts .themes .vim .vimrc .vimrc-global .zshrc .tmux.conf .jshintrc
 
 XORG_DIR=xorg/
 XORG_SYS=20-intel.conf 52-elantech-touchpad.conf
-XORG_USR=.drirc .xbindkeysrc .xinitrc .xscreensaver
+XORG_USR=.drirc .xbindkeysrc .xinitrc .xscreensaver .Xresources
 
 setup = @./`ls -d */ | grep $(1)`setup.sh
 

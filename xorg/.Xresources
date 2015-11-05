@@ -1,0 +1,8 @@
+XTerm*faceName: Monaco for Powerline
+XTerm*faceSize: 11.5
+XTerm*locale: true
+XTerm*background: #0F2134
+XTerm*foreground: #B2C6CD
+XTerm*borderWidth: 0
+XTerm*VT100.geometry: 80x24
+XTerm*VT100.cursorBlink: true
