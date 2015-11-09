@@ -85,6 +85,7 @@ export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
 alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
+alias rmsec='shred -uv'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 # Input Method configuration
