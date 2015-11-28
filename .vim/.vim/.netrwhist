@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/samet/projects/sametsisartenep.crabdance.com/web/views/layouts'
+let g:netrw_dirhist_2='/home/samet/projects/sametsisartenep.crabdance.com/web/views'
+let g:netrw_dirhist_3='/home/samet/projects/sametsisartenep.crabdance.com/web/views/partials'

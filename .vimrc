@@ -12,8 +12,8 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:vim_json_syntax_conceal = 0
 let g:mustache_abbreviations = 1
-"let g:syntastic_cpp_compiler='clang++'
-"let g:syntastic_c_compiler='clang'
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_c_compiler='clang'
 let g:syntastic_cpp_compiler_options=' -std=c++11'
 let g:syntastic_c_compiler_options=' -std=c11'
 
@@ -36,7 +36,7 @@ set showmode
 set t_Co=256
 set tw=76
 
-set background=dark
+set background=light
 " SOLARIZED
 "let g:solarized_termcolors=256
 "let g:solarized_visibility="high"
@@ -44,7 +44,10 @@ set background=dark
 "colorscheme solarized
 
 " RAILSCASTS
-colorscheme railscasts
+"colorscheme railscasts
+
+" GITHUB
+colorscheme github
 
 " C64
 "colorscheme C64
