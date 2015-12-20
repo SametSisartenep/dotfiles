@@ -96,7 +96,11 @@ alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_
 # ibus-daemon -drx
 
 # screenshots folder
-PICTURES=/home/samet/Imágenes/screenshots
+PICTURES=$HOME/Imágenes/screenshots
+
+# Custom Utilities
+export UTILS_PATH=$HOME/utils
+export PATH="$UTILS_PATH:$PATH"
 
 # Default Terminal
 export TERM=screen-256color
@@ -106,6 +110,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+# Nvm setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
