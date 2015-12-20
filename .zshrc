@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="linuxonly"
-ZSH_THEME="lambda-write"
+ZSH_THEME="zerosion"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -119,3 +119,6 @@ export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # Google Depot Tools
 export PATH="$HOME/tools/depot_tools:$PATH"
+
+# Android Platform Tools
+export PATH="/opt/android-sdk/platform-tools:$PATH"

@@ -1,4 +1,5 @@
 [global_config]
+  dbus = True
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_font = SFNS Text Medium 9
   title_inactive_bg_color = "#000000"
@@ -22,12 +23,11 @@
 [profiles]
   [[default]]
     audible_bell = True
-    background_color = "#ffffdd"
     background_darkness = 0.88
     background_image = None
-    cursor_color = "#6d5320"
-    font = Hack 11.5
-    foreground_color = "#000000"
+    cursor_color = "#00aa00"
+    font = Monaco for Powerline 11.5
+    foreground_color = "#ffffff"
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
