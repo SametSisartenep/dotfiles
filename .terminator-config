@@ -22,7 +22,6 @@
 [plugins]
 [profiles]
   [[default]]
-    audible_bell = True
     background_darkness = 0.88
     background_image = None
     cursor_color = "#00aa00"
