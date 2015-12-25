@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+/usr/lib/gnome-terminal/gnome-terminal-server &
+sleep 0.05
+/usr/bin/gnome-terminal
