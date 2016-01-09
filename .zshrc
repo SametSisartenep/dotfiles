@@ -87,6 +87,7 @@ alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
 alias rmsec='shred -uv'
+alias v='vim'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 # Input Method configuration
