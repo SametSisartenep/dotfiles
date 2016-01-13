@@ -6,6 +6,7 @@ filetype plugin indent on
 syntax on
 
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_python_checkers = []
 let g:syntastic_html_jshint_conf = "$HOME/.jshintrc"
 let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = "✗"
@@ -34,7 +35,7 @@ nmap <C-N><C-N> :set invnumber<CR>
 set laststatus=2
 set showmode
 set t_Co=256
-set tw=76
+set tw=72
 
 set background=dark
 " SOLARIZED
