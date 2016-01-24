@@ -62,3 +62,5 @@ colorscheme railscasts
 " BASE16
 "let base16colorspace=256
 "colorscheme base16-default
+
+highlight LineNr ctermbg=black ctermfg=184
