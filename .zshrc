@@ -86,9 +86,14 @@ export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
 alias jump='clear && ls -laF'
 alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
-alias rmsec='shred -uv'
+alias rmsec='bleachbit -s'
+alias rmsec2='shred -uv'
 alias v='vim'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
+
+#  Docker
+## Remove exited containers
+alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 
 # Input Method configuration
 # export GTK_IM_MODULE=ibus
@@ -128,3 +133,14 @@ export PATH="$HOME/tools/depot_tools:$PATH"
 
 # Android Platform Tools
 export PATH="/opt/android-sdk/platform-tools:$PATH"
+
+# TMux
+if which tmux >/dev/null 2>&1; then
+  # If no session is started, start a new session
+  test -z ${TMUX} && tmux
+
+  # When quitting tmux, try to attach
+  while test -z ${TMUX}; do
+    tmux attach || break
+  done
+fi
