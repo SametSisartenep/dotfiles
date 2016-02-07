@@ -137,7 +137,7 @@ export PATH="/opt/android-sdk/platform-tools:$PATH"
 # TMux
 if which tmux >/dev/null 2>&1; then
   # If no session is started, start a new session
-  test -z ${TMUX} && tmux
+  test -z ${TMUX} && tty | grep pts && tmux
 
   # When quitting tmux, try to attach
   while test -z ${TMUX}; do

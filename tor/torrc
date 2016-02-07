@@ -200,8 +200,8 @@ AutomapHostsOnResolve 1
 AutomapHostsSuffixes .exit,.onion
 
 ## Transparent proxy
-TransPort 9040
-TransListenAddress 127.0.0.1
+TransPort 127.0.0.1:9040 IsolateClientAddr IsolateClientProtocol IsolateDestAddr
+#TransListenAddress 127.0.0.1
 
 ## Misc
 AvoidDiskWrites 1

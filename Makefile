@@ -9,8 +9,8 @@
 BASE=.fonts .themes .vim .vimrc .vimrc-global .zshrc .tmux.conf .jshintrc
 
 XORG_DIR=xorg/
-XORG_SYS=20-intel.conf 52-elantech-touchpad.conf
-XORG_USR=.drirc .xbindkeysrc .xinitrc .xscreensaver .Xresources
+XORG_SYS=20-intel.conf
+XORG_USR=xbindkeysrc .xinitrc .xscreensaver .Xresources
 
 setup = @./`ls -d */ | grep $(1)`setup.sh
 
@@ -37,11 +37,6 @@ xorg-usr:
 
 xorg: xorg-sys xorg-usr
 
-clang:
-	$(call setup,$@)
-
-llvm-clang: clang
-
 git-extras-tj:
 	$(call setup,$@)
 
@@ -49,29 +44,11 @@ git-extras: git-extras-tj
 
 git: git-extras-tj
 
-go:
-	$(call setup,$@)
-
 msf:
-	$(call setup,$@)
-
-npm:
-	$(call setup,$@)
-
-nvm:
 	$(call setup,$@)
 
 oh-my-zsh:
 	$(call setup,$@)
 
-python:
-	$(call setup,$@)
-
-qemu:
-	$(call setup,$@)
-
 rbenv:
-	$(call setup,$@)
-
-v8:
 	$(call setup,$@)

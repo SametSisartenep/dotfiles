@@ -1,0 +1,23 @@
+##  _______________________
+##  | TRANSPARENT PROXYING | 
+##  |______________________|
+##
+## IsolateClientAddr     = (on by default) Separate connecting clients
+by 
+##                         address
+## IsolateSOCKSAuth      = (on by default) Separate streams with
+different 
+##                         SOCKS authentications
+## IsolateClientProtocol = SOCKS4, SOCKS5, TransPort connections,
+NATDPort
+##                         connections, and DNSPort requests are all 
+##                         considered different protocols
+## IsolateDestPort       = Separate by destination port
+## IsolateDestAddr       = Separate by destination address 
+
+TransPort 127.0.0.1:9040 IsolateClientAddr IsolateClientProtocol IsolateDestAddr
+DNSPort 127.0.0.1:5353 
+
+VirtualAddrNetwork 127.192.0.0/10    ## maps an IP address from localhost/10
+AutomapHostsOnResolve 1              ## to each connection to a new host which
+AutomapHostsSuffixes .exit,.onion    ## ends in '.exit' or '.onion'
