@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ $# -lt 1]; then
+if [ $# -lt 1 ]; then
   echo "You need to chose a user to apply this to."
   exit 1
 fi
