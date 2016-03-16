@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="linuxonly"
-ZSH_THEME="zerosion"
+ZSH_THEME="zerosion2"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,7 +46,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vagrant)
+plugins=(git docker)
 
 # User configuration
 
@@ -137,10 +137,10 @@ export PATH="/opt/android-sdk/platform-tools:$PATH"
 # TMux
 if which tmux >/dev/null 2>&1; then
   # If no session is started, start a new session
-  test -z ${TMUX} && tty | grep pts && tmux
+  test -z ${TMUX} && tty | grep pts >/dev/null && tmux
 
   # When quitting tmux, try to attach
   while test -z ${TMUX}; do
-    tmux attach || break
+    tmux attach 2>/dev/null || break
   done
 fi
