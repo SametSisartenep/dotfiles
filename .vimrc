@@ -5,6 +5,8 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = []
 let g:syntastic_html_jshint_conf = "$HOME/.jshintrc"
@@ -23,7 +25,7 @@ let g:NERDTreeWinSize=25
 
 set listchars=trail:·,extends:>,precedes:<,tab:▸\ ,eol:¬
 set list!
-set number
+"set number
 
 nmap <silent> <C-Up> :wincmd k<CR>
 nmap <silent> <C-Down> :wincmd j<CR>
@@ -31,6 +33,14 @@ nmap <silent> <C-Left> :wincmd h<CR>
 nmap <silent> <C-Right> :wincmd l<CR>
 nmap <silent> <C-L> :NERDTreeToggle<CR>
 nmap <C-N><C-N> :set invnumber<CR>
+
+" Solves a problem with tmux key signals
+if &term =~ '^screen'
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
 
 set laststatus=2
 set showmode

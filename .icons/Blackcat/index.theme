@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=Blackcat
+Comment=Cat theme
+Example=left_ptr
+Inherits=core

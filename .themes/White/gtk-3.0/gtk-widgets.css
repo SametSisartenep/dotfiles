@@ -1,0 +1,28 @@
+@import url("gtk-widgets-plain.css");
+@import url("shadow-modifier.css");
+
+/***************
+ * make transparent *
+ ***************/
+.background {
+    color: @theme_fg_color;
+    background-color: alpha(shade(@bg_color,1.05),0.9);
+}
+
+.background:backdrop {
+	text-shadow: none;
+	icon-shadow: none;
+    color: @backdrop_fg_color;
+    background-color: alpha(@backdrop_bg_color, 0.9);
+}
+
+.header-bar,/*nautilus; system monitor*/
+GtkMessageDialog .titlebar,
+GtkDialog .titlebar,
+.titlebar { /*others*/
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      alpha(shade(@toolbar_bg_color, 1.04), 0.9),
+                                      shade(@toolbar_bg_color, 0.88)
+                                      );
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg7384"
+   sodipodi:docname="mail-message-new.svg"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   height="36"
+   width="36">
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:cy="51.455836"
+     pagecolor="#ffffff"
+     borderopacity="1"
+     showborder="true"
+     inkscape:bbox-paths="false"
+     guidetolerance="10"
+     inkscape:window-width="1033"
+     showguides="false"
+     inkscape:object-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:pageshadow="2"
+     inkscape:guide-bbox="true"
+     inkscape:snap-nodes="true"
+     bordercolor="#666666"
+     objecttolerance="10"
+     id="namedview88"
+     showgrid="false"
+     inkscape:window-maximized="0"
+     inkscape:window-x="327"
+     inkscape:snap-global="true"
+     inkscape:window-y="69"
+     gridtolerance="10"
+     inkscape:window-height="641"
+     inkscape:snap-to-guides="true"
+     inkscape:current-layer="layer13"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-24.678459"
+     inkscape:snap-grids="true"
+     inkscape:pageopacity="1">
+    <inkscape:grid
+       spacingx="1px"
+       spacingy="1px"
+       id="grid4866"
+       empspacing="2"
+       enabled="true"
+       type="xygrid"
+       snapvisiblegridlinesonly="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <title
+     id="title9167">Gnome Symbolic Icon Theme</title>
+  <defs
+     id="defs7386" />
+  <g
+     inkscape:label="status"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer9"
+     style="display:inline" />
+  <g
+     inkscape:label="devices"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer10" />
+  <g
+     inkscape:label="apps"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer11" />
+  <g
+     inkscape:label="actions"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer12" />
+  <g
+     inkscape:label="places"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer13">
+    <path
+       style="opacity:0.75;fill:#000000;fill-opacity:1;stroke:none"
+       d="m 473.17969,158.32227 c -0.5821,-1e-5 -1.16519,0.22378 -1.61133,0.66992 l -0.45508,0.45508 3.53516,3.5371 0.45508,-0.45703 c 0.89226,-0.89226 0.89187,-2.32844 0,-3.2207 l -0.31445,-0.31445 c -0.44613,-0.44613 -1.02728,-0.66992 -1.60938,-0.66992 z m -3.48047,2.54101 -10.74805,10.74609 C 456.81418,173.74636 456,178 456,178 c 0,0 4.20009,-0.56923 6.48633,-2.85547 l 10.74805,-10.74609 -3.53516,-3.53516 z M 450.125,162 c -1.17725,0 -2.125,0.94775 -2.125,2.125 l 0,19.75 c 0,1.17725 0.94775,2.125 2.125,2.125 l 19.75,0 c 1.17725,0 2.125,-0.94775 2.125,-2.125 l 0,-14.08984 -2,2 0,11.01757 C 470,183.46549 469.46549,184 468.80274,184 l -17.60547,0 C 450.53452,184 450,183.46549 450,182.80273 l 0,-17.60546 C 450,164.53451 450.53452,164 451.19727,164 l 11.20898,0 1.99805,-2 -14.2793,0 z"
+       id="rect4158"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:label="mimetypes"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer14" />
+  <g
+     inkscape:label="emblems"
+     transform="translate(-442,-156)"
+     inkscape:groupmode="layer"
+     id="layer15"
+     style="display:inline" />
+</svg>
