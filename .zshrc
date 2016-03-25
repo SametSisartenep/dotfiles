@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="linuxonly"
-ZSH_THEME="pure"
+ZSH_THEME="zerosion3"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,7 +99,7 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 # export GTK_IM_MODULE=ibus
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
-# ibus-daemon -drx
+# ibus-daemon -drx &
 
 # screenshots folder
 PICTURES=$HOME/Imágenes/screenshots
@@ -135,12 +135,12 @@ export PATH="$HOME/tools/depot_tools:$PATH"
 export PATH="/opt/android-sdk/platform-tools:$PATH"
 
 # TMux
-if which tmux >/dev/null 2>&1; then
-  # If no session is started, start a new session
-  test -z ${TMUX} && tty | grep pts >/dev/null && tmux
-
-  # When quitting tmux, try to attach
-  while test -z ${TMUX}; do
-    tmux attach 2>/dev/null || break
-  done
-fi
+#if which tmux >/dev/null 2>&1; then
+#   If no session is started, start a new session
+#  test -z ${TMUX} && tty | grep pts >/dev/null && tmux
+#
+#   When quitting tmux, try to attach
+#  while test -z ${TMUX}; do
+#    tmux attach 2>/dev/null || break
+#  done
+#fi
