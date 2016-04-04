@@ -47,15 +47,15 @@ set showmode
 set t_Co=256
 set tw=72
 
-set background=dark
+"set background=light
 " SOLARIZED
-"let g:solarized_termcolors=256
-"let g:solarized_visibility="high"
-"let g:solarized_contrast="high"
-"colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
+colorscheme solarized
 
 " RAILSCASTS
-colorscheme railscasts
+"colorscheme railscasts
 
 " GITHUB
 "colorscheme github

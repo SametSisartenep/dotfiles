@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="linuxonly"
-ZSH_THEME="pure"
+ZSH_THEME="rodori"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,7 +69,7 @@ fi
 # export ARCHFLAGS="-arch x86_64"
 
 # Linking flags
-export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
+#export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -101,9 +101,6 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 # export QT_IM_MODULE=ibus
 # ibus-daemon -drx
 
-# screenshots folder
-PICTURES=$HOME/Imágenes/screenshots
-
 # Custom Utilities
 export UTILS_PATH=$HOME/utils
 export PATH="$UTILS_PATH:$PATH"
@@ -116,31 +113,20 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-# Nvm setup
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# MongoDB path
-export PATH="$HOME/tools/mongodb/bin:$PATH"
-
 # Go Path
-export GOROOT="$HOME/tools/go"
-export GOPATH=$HOME/projects/go
-export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
-
-# Google Depot Tools
-export PATH="$HOME/tools/depot_tools:$PATH"
+export GOPATH=$HOME/Projects/Go
+export PATH="$GOPATH/bin:$PATH"
 
 # Android Platform Tools
-export PATH="/opt/android-sdk/platform-tools:$PATH"
+#export PATH="/opt/android-sdk/platform-tools:$PATH"
 
 # TMux
-if which tmux >/dev/null 2>&1; then
-  # If no session is started, start a new session
-  test -z ${TMUX} && tty | grep pts >/dev/null && tmux
-
-  # When quitting tmux, try to attach
-  while test -z ${TMUX}; do
-    tmux attach 2>/dev/null || break
-  done
-fi
+#if which tmux >/dev/null 2>&1; then
+#   If no session is started, start a new session
+#  test -z ${TMUX} && tty | grep pts >/dev/null && tmux
+#
+#   When quitting tmux, try to attach
+#  while test -z ${TMUX}; do
+#    tmux attach 2>/dev/null || break
+#  done
+#fi

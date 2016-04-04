@@ -6,8 +6,8 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
-rbenv install 2.2.4
-rbenv global 2.2.4
+rbenv install 2.3.0
+rbenv global 2.3.0
 
 # Now tell Rubygems not to install the documentation for each package
 # locally, and then install bundler
