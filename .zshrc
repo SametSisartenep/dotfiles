@@ -89,6 +89,7 @@ alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
 alias rmsec2='shred -uv'
 alias v='vim'
+alias subl='subl || subl2 || subl3'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 #  Docker
@@ -99,7 +100,7 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 # export GTK_IM_MODULE=ibus
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
-# ibus-daemon -drx &
+# ibus-daemon -drx
 
 # Custom Utilities
 export UTILS_PATH=$HOME/utils
@@ -114,7 +115,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # Go Path
-export GOPATH=$HOME/Projects/Go
+export GOPATH=$HOME/Go
 export PATH="$GOPATH/bin:$PATH"
 
 # Android Platform Tools
