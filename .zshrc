@@ -89,7 +89,6 @@ alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
 alias rmsec2='shred -uv'
 alias v='vim'
-alias subl='subl || subl2 || subl3'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 #  Docker

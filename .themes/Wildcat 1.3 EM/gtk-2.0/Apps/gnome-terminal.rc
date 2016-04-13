@@ -1,0 +1,11 @@
+style "terminal-screen" = "theme-dark"
+{
+	base[NORMAL]				= "#000000"	
+	
+	TerminalScreen::background-darkness	= 0.75
+}
+
+widget "*TerminalWindow"				style "theme-dark"
+widget "*TerminalWindow.*.TerminalScreen*"              style "terminal-screen"
+
+
