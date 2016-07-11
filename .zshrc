@@ -5,8 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="linuxonly"
-ZSH_THEME="rodori"
+ZSH_THEME="matrix"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,6 +54,9 @@ plugins=(git docker web-search)
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+setopt correct
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -67,9 +69,12 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export CFLAGS='-Wall -Werror-fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic'
+export CXXFLAGS='-Wall -Werror-fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic -D_FORTIFY_SOURCE=2'
 
 # Linking flags
 #export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
+export LDFLAGS='-Wall -Werror'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -83,12 +88,14 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias jump='clear && ls -laF'
+alias jump='clear && ls -laiF'
 alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
 alias rmsec2='shred -uv'
 alias v='vim'
+alias as='as --warn --statistics'
+alias hd='od -Ax -tx1z -v' # Thanks Matt!
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 #  Docker
