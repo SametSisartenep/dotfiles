@@ -37,16 +37,6 @@ xorg-usr:
 
 xorg: xorg-sys xorg-usr
 
-git-extras-tj:
-	$(call setup,$@)
-
-git-extras: git-extras-tj
-
-git: git-extras-tj
-
-msf:
-	$(call setup,$@)
-
 oh-my-zsh:
 	$(call setup,$@)
 
