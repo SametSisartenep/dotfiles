@@ -1,12 +1,12 @@
 [user]
-	name = SametSisartenep
-	email = rodrigosloop@gmail.com
-	signingkey = 447E41FE
+  name = SametSisartenep
+  email = rodrigosloop@gmail.com
+  signingkey = 447E41FE
 [core]
-	editor = vim
-	pager = diff-so-fancy | less
+  editor = nvim
+  pager = diff-so-fancy | less
 [alias]
-	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+  permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
 [commit]
   gpgsign = true
 [color]

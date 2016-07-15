@@ -1,42 +1,9 @@
 ![dotfiles logo](dotfiles-logo.png)
 
-My dotfiles and sysconfig files - vim, zsh, tmux, git, rbenv, nvm, go, etc.
+My dotfiles and sysconfig files - vim, neovim, zsh, tmux, git, rbenv, etc.
 
 > **NOTE:**
 > Most of the config files are based on Arch Linux.
-
-# Usage
-
-Clone the repo:
-
-`~$ git clone https://github.com/SametSisartenep/dotfiles.git`
-
-> **Make** sure you have `make` on your system ;-)
-
-Apply the options following the command below.
-
-`~$ make [option]`
-
-Setup Options:
-
-- `base` _// Base configuration files._
-- `xorg-sys` _// Xorg system wide config files._
-- `xorg-usr` _// Xorg user config files._
-- `xorg` _// Intalls system + user config files._
-- `clang` _// LLVM + Clang setup._
-- `llvm-clang` _// LLVM + Clang setup._
-- `git-extras-tj` _// Git extras (By @tj) setup._
-- `git-extras` _// Shortcut to **git-extras-tj**._
-- `git` _// Shorcut to **git-extras-tj**._
-- `go` _// Go setup._
-- `msf` _// Metasploit Framework database config file._
-- `npm` _// NPM modules installation._
-- `nvm` _// NVM setup._
-- `oh-my-zsh` _// oh-my-zsh Framework setup._
-- `python` _// Python pip -> powerline + virtualenv setup._
-- `qemu` _// Qemu setup._
-- `rbenv` _// rbenv ruby (2.2.2) setup._
-- `v8` _// V8 Engine setup._
 
 # Some info about the config files.
 
@@ -47,9 +14,18 @@ Setup Options:
 - `.vim` *// Vim infrastructure directory (include Pathogen + Mods).*
 - `.vimrc` *// Vim config file.*
 - `.vimrc-global` *// Vim global config file (copied to /etc/vimrc).*
+- `.config/nvim` *// NeoVim infrastructure directory (include Pathogen + Plugins).*
 - `.zshrc` *// Zsh config file (custom ENV variables + aliases).*
+- `.oh-my-zsh` *// Oh My Zsh repo.*
 - `.tmux.conf` *// Tmux config file.*
-- `.jshintrc` *// JSHint code style spec file.*
+- `.gnupg` *// GnuPG hardened config file.*
+- `.gitconfig` *// Git config file (diff colors + gpg signing + custom extensions).*
+- `.gdbinit` *// GDB config file (python skin to improve UI).*
+- `clang` *// Clang latest release (from repo).*
+- `tcpdump` *// Use tcpdump without root.*
+- `tor` *// Tor config file.*
+- `shen` *// A set of scripts and console games.*
+- `msf` *// Metasploit Framework basic config file.*
 
 **Xorg** config files (System Dependent)
 
@@ -57,8 +33,8 @@ Setup Options:
 - `52-elantech-touchpad.conf` *// Detailed spec for the touchpad.*
 - `.drirc` *// Disables VSync, so you use Intel Triple Buffering.*
 - `.xbindkeysrc` *// Keyboard shortcuts config.*
-- `.xinitrc` *// Xorg init file. Based on LXDE*
-- `.xscreensaver` *// Screensaver preferences file.*
+- `.xinitrc` *// Xorg init file. Based on AwesomeWM*
+- `.xscreensaver` *// XScreensaver preferences file.*
 
 ## LICENSE
 
