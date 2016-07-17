@@ -49,12 +49,20 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <Right> :bnext<CR>
 nnoremap <silent> <Left> :bprev<CR>
 
+" Clear search highlightning
+nmap <silent> <C-c> :nohlsearch<CR>
+
 " Solves a problem with tmux key signals
 if &term =~ '^screen'
   execute "set <xUp>=\e[1;*A"
   execute "set <xDown>=\e[1;*B"
   execute "set <xRight>=\e[1;*C"
   execute "set <xLeft>=\e[1;*D"
+endif
+
+" Jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 set mouse=a

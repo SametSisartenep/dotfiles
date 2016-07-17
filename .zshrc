@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker web-search)
+plugins=(git docker web-search zsh-syntax-highlighting)
 
 # User configuration
 
@@ -62,15 +62,18 @@ setopt correct
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
   export EDITOR='vim'
 fi
 
+# Preprocessing flags
+CPPFLAGS='-D_FORTIFY_SOURCE=2'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export CFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic'
-export CXXFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic -D_FORTIFY_SOURCE=2'
+export CFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic --param=ssp-buffer-size=4'
+export CXXFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic'
 
 # Linking flags
 #export LD_LIBRARY_PATH="/usr/local/lib/$USER:$LD_LIBRARY_PATH"
@@ -93,9 +96,9 @@ alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
 alias rmsec2='shred -uv'
-alias v='vim'
 alias as='as --warn --statistics'
 alias hd='od -Ax -tx1z -v' # Thanks Matt!
+alias jobs='jobs -l'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
 #  Docker
@@ -107,6 +110,12 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 # ibus-daemon -drx
+
+# Zsh Syntax Highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS+=('rm *' 'fg=black,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -*f*' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rmhard *' 'fg=white,bold,bg=red')
 
 # Custom Utilities
 export UTILS_PATH=$HOME/utils

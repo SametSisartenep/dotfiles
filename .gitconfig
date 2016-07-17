@@ -7,6 +7,8 @@
 	pager = diff-so-fancy | less
 [alias]
   permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+  ignore = !echo >> .gitignore
+  anotag = tag -a
 [commit]
   gpgsign = true
 [color]
