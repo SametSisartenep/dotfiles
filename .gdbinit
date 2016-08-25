@@ -1185,7 +1185,6 @@ end
 
 # Better GDB defaults ----------------------------------------------------------
 
-set history save
 set confirm off
 set verbose off
 set print pretty on
