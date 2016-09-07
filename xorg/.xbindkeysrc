@@ -1,19 +1,31 @@
 # increase volume
-"pulseaudio-ctl up"
+"amixer set Master,0 1%+"
   XF86AudioRaiseVolume
 
 # decrease volume
-"pulseaudio-ctl down"
+"amixer set Master,0 1%-"
   XF86AudioLowerVolume
 
 # mute sound (toggling)
-"pulseaudio-ctl mute"
+"amixer set Master,0 toggle"
   XF86AudioMute
 
 # increase brightness
-"xbacklight -inc 5"
+"xbacklight -inc 10"
   XF86MonBrightnessUp
 
 # decrease brightness
-"xbacklight -dec 5"
+"xbacklight -dec 10"
   XF86MonBrightnessDown
+
+# Chromium
+"chromium"
+control+alt + g
+
+# Firefox
+"firefox"
+control+alt + f
+
+# KeePassX2
+"keepassx2"
+control+alt + k
