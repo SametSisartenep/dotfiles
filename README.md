@@ -33,7 +33,7 @@ My dotfiles and sysconfig files - vim, neovim, zsh, tmux, git, rbenv, etc.
 - `52-elantech-touchpad.conf` *// Detailed spec for the touchpad.*
 - `.drirc` *// Disables VSync, so you use Intel Triple Buffering.*
 - `.xbindkeysrc` *// Keyboard shortcuts config.*
-- `.xinitrc` *// Xorg init file. Based on AwesomeWM*
+- `.xinitrc` *// Xorg init file. Based on DWM*
 - `.xscreensaver` *// XScreensaver preferences file.*
 
 ## LICENSE
