@@ -20,12 +20,15 @@
 
 # Chromium
 "chromium"
-control+alt + g
+  control+alt + g
 
 # Firefox
 "firefox"
-control+alt + f
+  control+alt + f
 
 # KeePassX2
 "keepassx2"
-control+alt + k
+  control+alt + k
+
+"scrot ~/Pictures/screenshots/Screenshot\ from\ %Y-%m-%d\ %H-%M-%S.png"
+  Print

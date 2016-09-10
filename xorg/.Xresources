@@ -1,8 +1,36 @@
-XTerm*faceName: Monaco for Powerline
-XTerm*faceSize: 11.5
+Xcursor.theme: Mac_OSX_Aqua
+
+Xft.dpi: 106
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintmedium
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+XTerm*faceName: Inconsolata
+XTerm*faceSize: 12.5
 XTerm*locale: true
-XTerm*background: #0F2134
-XTerm*foreground: #B2C6CD
+XTerm*background: #FFFFFF
+XTerm*foreground: #000000
 XTerm*borderWidth: 0
 XTerm*VT100.geometry: 80x24
 XTerm*VT100.cursorBlink: true
+
+UXTerm*faceName: Inconsolata
+UXTerm*faceSize: 12.5
+UXTerm*locale: true
+UXTerm*background: #FFFFFF
+UXTerm*foreground: #000000
+UXTerm*borderWidth: 0
+UXTerm*VT100.geometry: 80x24
+UXTerm*VT100.cursorBlink: true
+
+URxvt*face: xft:Inconsolata:size=12.5
+URxvt*locale: true
+URxvt*scrollBar: false
+URxvt*background: #000000
+URxvt*foreground: #FFFFFF
+URxvt*borderWidth: 0
+URxvt*geometry: 80x24
+URxvt*VT100.cursorBlink: true
