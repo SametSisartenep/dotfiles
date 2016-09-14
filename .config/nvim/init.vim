@@ -2,7 +2,7 @@ set formatoptions+=t
 
 execute pathogen#infect()
 filetype plugin indent on
-syntax on
+syntax off
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -45,6 +45,9 @@ nmap <silent> <C-L> :NERDTreeToggle<CR>
 nmap <C-N><C-N> :set invnumber<CR>
 nmap <F8> :TagbarToggle<CR>
 
+" Add newline on indent
+let delimitMate_expand_cr=1
+
 " Change buffers
 nnoremap <silent> <Right> :bnext<CR>
 nnoremap <silent> <Left> :bprev<CR>
@@ -72,6 +75,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" C Rules
+autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
+
 set laststatus=2
 set showmode
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -94,7 +100,7 @@ set wrap
 map j gj
 map k gk
 
-set background=dark
+set background=light
 " SOLARIZED
 "let g:solarized_termcolors=256
 "let g:solarized_visibility="high"
@@ -102,14 +108,14 @@ set background=dark
 "colorscheme solarized
 
 " OCEANIC NEXT
-colorscheme OceanicNext
+"colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
 
 " RAILSCASTS
 "colorscheme railscasts
 
 " GITHUB
-"colorscheme github
+colorscheme github
 
 " C64
 "colorscheme C64
@@ -123,5 +129,3 @@ let g:airline_theme='oceanicnext'
 " BASE16
 "let base16colorspace=256
 "colorscheme base16-default
-
-highlight LineNr ctermbg=black ctermfg=184
