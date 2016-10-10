@@ -5,6 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="oceanic"
 ZSH_THEME="matrix"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -72,7 +73,7 @@ CPPFLAGS='-D_FORTIFY_SOURCE=2'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-export CFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic --param=ssp-buffer-size=4'
+export CFLAGS='-Wall -Wextra -Werror -Wformat-security -Wpointer-arith -Wformat-nonliteral -fno-exceptions -fstack-protector-strong -fsanitize=safe-stack -Winit-self --param=ssp-buffer-size=4 -Wpedantic -pedantic -pipe -O2 -fpie -pie -Wl,--no-undefined -Wl,--build-id=sha1 -Wl,-z,relro -Wl,-z,now -Wl,-O1a -s'
 export CXXFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong -Wl,-z,relro -Wl,-z,now -Wformat-security -Wpointer-arith -Wformat-nonliteral -Winit-self -Wl,-O1a -Wl,--no-undefined -Wl,--build-id=sha1 -Wpedantic -pedantic'
 
 # Linking flags
@@ -91,7 +92,7 @@ export LDFLAGS='-Wall -Werror'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias jump='clear && ls -laiF'
+alias jump='clear && ls -Filas'
 alias rmhard='rm -rfv'
 alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
@@ -113,9 +114,12 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 
 # Zsh Syntax Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-ZSH_HIGHLIGHT_PATTERNS+=('rm *' 'fg=black,bg=red')
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[command]='fg=blue,bold'
+ZSH_HIGHLIGHT_PATTERNS+=('rm' 'fg=black,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('rm -*f*' 'fg=white,bold,bg=red')
-ZSH_HIGHLIGHT_PATTERNS+=('rmhard *' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rmhard' 'fg=white,bold,bg=red')
 
 # Custom Utilities
 export UTILS_PATH=$HOME/utils
@@ -123,11 +127,6 @@ export PATH="$UTILS_PATH:$PATH"
 
 # Default Terminal
 export TERM=screen-256color
-
-# Rbenv setup
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # Go Path
 export GOPATH=$HOME/Go
