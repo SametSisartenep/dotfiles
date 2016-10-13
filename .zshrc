@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="oceanic"
-ZSH_THEME="matrix"
+ZSH_THEME="oceanic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -112,6 +112,13 @@ alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
 # export QT_IM_MODULE=ibus
 # ibus-daemon -drx
 
+# Keyboard config
+if [ ! -z $DISPLAY ];then
+  if [[ ! "$(setxkbmap -query | grep layout | awk '{print $2}')" == "es" ]];then
+    setxkbmap es
+  fi
+fi
+
 # Zsh Syntax Highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
@@ -131,6 +138,10 @@ export TERM=screen-256color
 # Go Path
 export GOPATH=$HOME/Go
 export PATH="$GOPATH/bin:$PATH"
+
+# Plan9 from User Space
+unalias 9
+export PLAN9=/usr/lib/plan9/
 
 # Android Platform Tools
 #export PATH="/opt/android-sdk/platform-tools:$PATH"
