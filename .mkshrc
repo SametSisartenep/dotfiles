@@ -1,7 +1,6 @@
-# -*- mode: mksh -*-
-# vi: set ft=mksh :
+# $Antares: .mkshrc,v 1.0 2016/10/17 05:15:36 samet Exp $
 #
-# .mkshrc: Interactive MirBSD Korn Shell resources.
+# Interactive MirBSD Korn Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.

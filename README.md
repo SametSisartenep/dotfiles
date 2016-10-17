@@ -3,7 +3,7 @@
 My dotfiles and sysconfig files - vim, neovim, zsh, tmux, git, rbenv, etc.
 
 > **NOTE:**
-> Most of the config files are based on Arch Linux.
+> Most of the config files are based on Void Linux.
 
 # Some info about the config files.
 
@@ -15,7 +15,11 @@ My dotfiles and sysconfig files - vim, neovim, zsh, tmux, git, rbenv, etc.
 - `.vimrc` *// Vim config file.*
 - `.vimrc-global` *// Vim global config file (copied to /etc/vimrc).*
 - `.config/nvim` *// NeoVim infrastructure directory (include Pathogen + Plugins).*
-- `.zshrc` *// Zsh config file (custom ENV variables + aliases).*
+- `.profile` *// [MirBSD] Korn Shell login session resources.*
+- `.mkshrc` *// MirBSD Korn Shell interactive session resources.*
+- `.kshrc` *// Korn Shell interactive session resources.*
+- `.zshrc` *// Zsh interactive session resources.*
+- `.zprofile` *// Zsh login session resources.*
 - `.oh-my-zsh` *// Oh My Zsh repo.*
 - `.tmux.conf` *// Tmux config file.*
 - `.gnupg` *// GnuPG hardened config file.*

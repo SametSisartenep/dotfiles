@@ -1,7 +1,6 @@
-# -*- mode: zsh -*-
-# vi: set ft=zsh :
+# $Antares: .zshrc,v 2.0 2016/10/17 05:18:12 samet Exp $
 #
-# .zshrc: Interactive Z Shell resources.
+# Interactive Z Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.

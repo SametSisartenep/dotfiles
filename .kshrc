@@ -1,7 +1,6 @@
-# -*- mode: ksh -*-
-# vi: set ft=ksh :
+# $Antares: .kshrc,v 1.0 2016/10/17 05:17:26 samet Exp $
 #
-# .kshrc: Interactive Korn Shell resources.
+# Interactive Korn Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.

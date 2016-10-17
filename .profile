@@ -1,5 +1,6 @@
+# $Antares: .profile,v 1.0 2016/10/17 05:22:24 samet Exp $
 #
-# .profile: Login [MirBSD] Korn Shell resources.
+# Login [MirBSD] Korn Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.

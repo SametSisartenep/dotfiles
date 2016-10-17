@@ -1,5 +1,6 @@
+# $Antares: .zprofile,v 1.0 2016/10/17 05:24:17 samet Exp $
 #
-# .zprofile: Login Z Shell resources.
+# Login Z Shell resources.
 # 
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.
