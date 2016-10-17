@@ -10,15 +10,15 @@
   ignore = !echo >> .gitignore
   anotag = tag -a
 [commit]
-  gpgsign = true
+  gpgsign = false
 [color]
   ui = always
 [color "diff"]
-  meta = yellow bold
-  commit = green bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+  meta = yellow
+  commit = green
+  frag = magenta
+  old = red
+  new = green
   whitespace = red reverse
 [color "diff-highlight"]
   oldNormal = red bold

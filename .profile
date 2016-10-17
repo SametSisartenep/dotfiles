@@ -1,14 +1,24 @@
 #
-# .profile: Login Korn Shell resources.
+# .profile: Login [MirBSD] Korn Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.
 #
 # Load environment
-if [ -f $HOME/.kshrc -a -r $HOME/.kshrc ]; then
-  ENV=$HOME/.kshrc
-  export ENV
-fi
+case $0 in
+  *mksh)
+      if [ -f $HOME/.mkshrc -a -r $HOME/.mkshrc ]; then
+        ENV=$HOME/.mkshrc
+        export ENV
+      fi
+      ;;
+  *ksh)
+      if [ -f $HOME/.kshrc -a -r $HOME/.kshrc ]; then
+        ENV=$HOME/.kshrc
+        export ENV
+      fi
+      ;;
+esac
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

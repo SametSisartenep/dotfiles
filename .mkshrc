@@ -1,16 +1,16 @@
-# -*- mode: ksh -*-
-# vi: set ft=ksh :
+# -*- mode: mksh -*-
+# vi: set ft=mksh :
 #
-# .kshrc: Interactive Korn Shell resources.
+# .mkshrc: Interactive MirBSD Korn Shell resources.
 #
 # Copyright (C) 2016 Rodrigo González López.
 # All rights reserved.
 #
 # Prompt
 case $LOGNAME in
-  root) PS1="\# "
+  root) PS1="# "
     ;;
-  *) PS1="\% "
+  *) PS1="% "
     ;;
 esac
 
@@ -55,5 +55,11 @@ if [ ! -z $DISPLAY ];then
   fi
 fi
 
-# Emacs Mode
+# Dircolors setup
+eval $(dircolors -b ~/.dircolors)
+
+# Shell options
 set -o emacs
+set -o bgnice
+set -o notify
+set -o utf8-mode
