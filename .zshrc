@@ -42,6 +42,9 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm' 'fg=black,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('rm -*f*' 'fg=white,bold,bg=red')
 ZSH_HIGHLIGHT_PATTERNS+=('rmhard' 'fg=white,bold,bg=red')
 
+# GnuPG
+GPG_TTY=$(tty)
+
 #  Docker
 ## Remove exited containers
 alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'

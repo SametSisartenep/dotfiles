@@ -10,7 +10,7 @@
   ignore = !echo >> .gitignore
   anotag = tag -a
 [commit]
-  gpgsign = false
+  gpgsign = true
 [color]
   ui = always
 [color "diff"]

@@ -44,6 +44,9 @@ alias hd='od -Ax -tx1z -v' # Thanks Matt!
 alias jobs='jobs -l'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
+# GnuPG
+GPG_TTY=$(tty)
+
 #  Docker
 ## Remove exited containers
 alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
