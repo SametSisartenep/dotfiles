@@ -22,13 +22,12 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:vim_json_syntax_conceal = 0
 let g:mustache_abbreviations = 1
-"let g:syntastic_cpp_compiler='clang++'
-"let g:syntastic_c_compiler='clang'
-"let g:syntastic_cpp_compiler_options=' -std=c++11'
-"let g:syntastic_c_compiler_options=' -std=c11'
+let g:syntastic_c_compiler='clang'
+let g:syntastic_c_compiler_options=' -std=c99 -pedantic -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L'
 
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_powerline_fonts = 1
 
 let NERDTreeShowHidden=1
 let g:NERDTreeWinSize=25
@@ -78,6 +77,15 @@ set expandtab
 " C Rules
 autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
 
+" C++ Rules
+autocmd FileType cpp setlocal noexpandtab shiftwidth=8 tabstop=8
+
+" Go Rules
+autocmd FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
+
+" XBPS Rules
+autocmd FileType conf setlocal noexpandtab shiftwidth=8 tabstop=8
+
 set laststatus=2
 set showmode
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -107,15 +115,22 @@ set background=light
 "let g:solarized_contrast="high"
 "colorscheme solarized
 
+" PLAN9 ACME
+colorscheme acme
+
 " OCEANIC NEXT
 "colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+"let g:airline_theme='oceanicnext'
+
+" PAPER COLOR
+"colorscheme PaperColor
+let g:airline_theme='papercolor'
 
 " RAILSCASTS
 "colorscheme railscasts
 
 " GITHUB
-colorscheme github
+"colorscheme github
 
 " C64
 "colorscheme C64
