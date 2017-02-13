@@ -4,30 +4,9 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax off
 
-let g:airline#extensions#tabline#enabled = 1
-
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['buffer']
-let g:deoplete#sources.c = ['buffer', 'tag']
-
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {'regex': 'possibly useless use of a variable in void context'}
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_python_checkers = []
-let g:syntastic_html_jshint_conf = "$HOME/.jshintrc"
-let g:syntastic_check_on_open = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:vim_json_syntax_conceal = 0
-let g:mustache_abbreviations = 1
-let g:syntastic_c_compiler='clang'
-let g:syntastic_c_compiler_options=' -std=c99 -pedantic -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L'
-
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_powerline_fonts = 1
+set background=light
+" PLAN9 ACME
+colorscheme acme
 
 let NERDTreeShowHidden=1
 let g:NERDTreeWinSize=25
@@ -56,37 +35,29 @@ nmap <silent> <C-c> :nohlsearch<CR>
 
 " Solves a problem with tmux key signals
 if &term =~ '^screen'
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
+	execute "set <xUp>=\e[1;*A"
+	execute "set <xDown>=\e[1;*B"
+	execute "set <xRight>=\e[1;*C"
+	execute "set <xLeft>=\e[1;*D"
 endif
 
 " Jump to the last position when reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 set mouse=a
 
 set smarttab
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=8
+set shiftwidth=8
+set noexpandtab
 
-" C Rules
-autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
+hi slnc cterm=bold ctermbg=black ctermfg=white
 
-" C++ Rules
-autocmd FileType cpp setlocal noexpandtab shiftwidth=8 tabstop=8
-
-" Go Rules
-autocmd FileType go setlocal noexpandtab shiftwidth=8 tabstop=8
-
-" XBPS Rules
-autocmd FileType conf setlocal noexpandtab shiftwidth=8 tabstop=8
-
+set statusline=%#slnc#%3.3P\ \ %4.l,\ %3.c%=%-.40f\ %h%m%r%=\ %Y\ [%{strlen(&fenc)?&fenc:'none'}\|%{&ff}]\ 
 set laststatus=2
+
 set showmode
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "set t_Co=256
@@ -99,7 +70,7 @@ set showmatch
 set smartcase
 
 set lbr
-set tw=72
+set tw=75
 
 set ai
 set si
@@ -107,40 +78,3 @@ set wrap
 
 map j gj
 map k gk
-
-set background=light
-" SOLARIZED
-"let g:solarized_termcolors=256
-"let g:solarized_visibility="high"
-"let g:solarized_contrast="high"
-"colorscheme solarized
-
-" PLAN9 ACME
-colorscheme acme
-
-" OCEANIC NEXT
-"colorscheme OceanicNext
-"let g:airline_theme='oceanicnext'
-
-" PAPER COLOR
-"colorscheme PaperColor
-let g:airline_theme='papercolor'
-
-" RAILSCASTS
-"colorscheme railscasts
-
-" GITHUB
-"colorscheme github
-
-" C64
-"colorscheme C64
-
-" INORI
-"colorscheme inori
-
-" MATRIX
-"colorscheme greenvision
-
-" BASE16
-"let base16colorspace=256
-"colorscheme base16-default

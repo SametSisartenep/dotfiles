@@ -1,4 +1,4 @@
-# $Antares: .zshrc,v 2.0 2016/10/17 05:18:12 samet Exp $
+# $Antares: .zshrc,v 2.0 2016/10/17 05:18 samet Exp $
 #
 # Interactive Z Shell resources.
 #

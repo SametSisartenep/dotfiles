@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -lt 1 ];then
+	echo "Bad shit happens."
+	exit 1
+fi
+
+for f in default-16.lua default-256.lua; do
+	rm -v ./$f
+	ln -sv $1 $f
+done

@@ -1,0 +1,88 @@
+# $Antares: .sxhkdrc,v 1.0 2017/02/01 15:35:27 sam Exp $
+#
+# sxhkd configuration file.
+#
+# Copyright (C) 2017 Rodrigo González López
+# All rights reserved.
+#
+
+# Reload
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# WM Management
+#super + {0-9}
+#	workspace -g {0-9}
+
+#shift + super + {0-9}
+#	workspace -m {0-9}
+
+#super + p
+#	dmenu_run
+
+#shift + super + l
+#	xautolock -locknow
+
+#super + {h,j,k,l}
+#	closest {h,j,k,l}
+
+#super + {Left,Up,Down,Right}
+#	wmv {-10 0,0 -10,0 10,10 0} $(pfw)
+
+#shift + super + {Left,Up,Down,Right}
+#	wrs {-10 0,0 -10,0 10,10 0} $(pfw)
+
+#super + f
+	fullscreen $(pfw)
+
+#shift + super + k
+#	killw $(pfw)
+
+#shift + super + Return
+#	st -f Go\ Mono:size=10
+
+# (in|de)crease volume
+XF86Audio{Raise,Lower}Volume
+	amixer set Master 1%{+,-}
+
+# toggle mute
+XF86AudioMute
+	amixer set Master toggle
+
+# increase brightness
+XF86MonBrightness{Up,Down}
+	xbacklight -{in,de}c 2
+
+# Power Control Menu
+ctrl + alt + p
+	9menu -teleport -popup -label Power\ Control Shutdown:doas\ poweroff Reboot:doas\ reboot Suspend:doas\ zzz exit
+
+# GIMP
+ctrl + alt + g
+	firejail gimp
+
+# Firefox
+ctrl + alt + f
+	firejail firefox
+
+# Tor Browser
+ctrl + alt + o
+	firejail --profile=~/.config/firejail/torbrowser.profile tor-browser-en
+
+# KeePassX2
+ctrl + alt + k
+	keepassx2
+
+# Terminal
+ctrl + alt + t
+	st -f Inconsolata:size=12.5
+
+# Transmission
+ctrl + alt + b
+	firejail transmission-gtk
+
+Print
+	escrotum ~/Pictures/screenshots/Screenshot\ from\ %Y-%m-%d\ %H-%M-%S.png
+
+shift + Print
+	escrotum -s ~/Pictures/screenshots/Screenshot\ from\ %Y-%m-%d\ %H-%M-%S.png

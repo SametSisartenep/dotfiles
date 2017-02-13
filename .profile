@@ -1,8 +1,8 @@
-# $Antares: .profile,v 1.0 2016/10/17 05:22:24 samet Exp $
+# $Antares: .profile,v 1.0 2017/01/30 19:19 sam Exp $
 #
 # Login [MirBSD] Korn Shell resources.
 #
-# Copyright (C) 2016 Rodrigo González López.
+# Copyright (C) 2016-2017 Rodrigo González López.
 # All rights reserved.
 #
 # Load environment
@@ -23,14 +23,19 @@ esac
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='nvi'
+  export VISUAL='nvi'
 else
-  export EDITOR='vim'
+  export EDITOR='vis'
+  export VISUAL='vis'
 fi
 
 # Pager settings
-PAGER=less
-LESS=-R
+export PAGER=less
+export LESS=-R
+
+# grep highlighting color
+export GREP_COLOR='4;30'
 
 # Preprocessing flags
 export CPPFLAGS='-D_FORTIFY_SOURCE=2'
@@ -45,8 +50,8 @@ export CXXFLAGS='-Wall -Wextra -Werror -fno-exceptions -fstack-protector-strong 
 export LDFLAGS='-Wall -Werror'
 
 # Custom Utilities
-export UTILS_PATH=$HOME/utils
-export PATH="$UTILS_PATH:$PATH"
+BIN=~/bin
+export PATH="$BIN:$PATH"
 
 # Default Terminal
 export TERM=st-256color
@@ -60,3 +65,6 @@ export PLAN9=/usr/lib/plan9
 
 # Android Platform Tools
 #export PATH="/opt/android-sdk/platform-tools:$PATH"
+
+# Freetype Properties
+export FREETYPE_PROPERTIES="truetype:interpreter-version=40"

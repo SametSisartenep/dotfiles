@@ -1,4 +1,4 @@
-# $Antares: .zprofile,v 1.0 2016/10/17 05:24:17 samet Exp $
+# $Antares: .zprofile,v 1.0 2016/10/17 05:24 samet Exp $
 #
 # Login Z Shell resources.
 # 
@@ -8,9 +8,9 @@
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='vis'
 else
-  export EDITOR='vim'
+  export EDITOR='vis'
 fi
 
 # Preprocessing flags
