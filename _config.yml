@@ -1,0 +1,8 @@
+title: Dotfiles
+description: My dotfiles and sysconfig files - vim, zsh, tmux, git, rbenv, nvm, go, etc.
+google_analytics: UA-65830092-2
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
