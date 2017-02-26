@@ -6,22 +6,25 @@ based lexers from the [Scintillua](http://foicica.com/scintillua/) project.
 
 # Vis integration
 
-Vis searches the lexers in the following locations:
+Vis searches the lexers in the following locations (check the end of the
+`:help` output for the exact paths used by your binary):
 
  * `$VIS_PATH/lexers`
- * `./lexers` relative to the binary location (using `/proc/self/exe`)
- * `$XDG_CONFIG_HOME/vis/lexers`
- * `/usr/local/share/vis/lexers`
- * `/usr/share/vis/lexers`
- * `package.path` (standard lua search path)
+ * `./lua/lexers` relative to the binary location (using `/proc/self/exe`)
+ * `$XDG_CONFIG_HOME/vis/lexers` where `$XDG_CONFIG_HOME` refers to
+   `$HOME/.config` if unset.
+ * `/etc/vis/lexers`
+ * `/usr/local/share/vis/lexers` or `/usr/share/vis/lexers` depending on
+    the build configuration
+ * `package.path` the standard Lua search path is queried for `lexers/$name`
 
-at runtime a specific lexer can be loded by means of `:set syntax <name>`
+At runtime a specific lexer can be loded by means of `:set syntax <name>`
 where `<name>` corresponds to the filename without the `.lua` extension.
 
 # Adding new lexers
 
-To add a new lexer, start with the `template.txt` found in this directory
-or a lexer of a similiar language. Read the 
+To add a new lexer, start with the template quoted below or a lexer of a
+similiar language. Read the
 [lexer module documentation](http://foicica.com/scintillua/api.html#lexer).
 The [LPeg](http://www.inf.puc-rio.br/~roberto/lpeg/) introduction might also
 be useful.
@@ -32,16 +35,45 @@ script as described in the
 
 To enable auto syntax highlighting when opening a file you can associate your
 new lexer with a set of file extensions by adding a corresponding entry into
-the table found at the end of the [lexer.lua](lexer.lua) file.
+the table found in [`plugins/filetype.lua`](../plugins/filetype.lua) file.
 
 Changes to existing lexers should also be sent upstream for consideration.
 
+A template for new lexers:
+
+```
+-- ? LPeg lexer.
+
+local l = require('lexer')
+local token, word_match = l.token, l.word_match
+local P, R, S = lpeg.P, lpeg.R, lpeg.S
+
+local M = {_NAME = '?'}
+
+-- Whitespace.
+local ws = token(l.WHITESPACE, l.space^1)
+
+M._rules = {
+  {'whitespace', ws},
+}
+
+M._tokenstyles = {
+
+}
+
+return M
+```
+
 # Color Themes
 
-The `themes` sub directory contains the color schemes. At startup the
-`default.lua` theme which should be a symlink to your prefered style is
-used. Themes can be changed at runtime via the `:set theme <name>`
-command where `<name>` does not include the `.lua` file extension.
+The `../themes` directory contains the color schemes. Depending on the
+number of colors supported by your terminal, vis will start with either
+the `default-16` or `default-256` theme. Symlink it to your prefered
+style or add a command like the following one to your `visrc.lua`:
+
+```
+vis:command("set theme solarized")
+```
 
 # Dependencies
 

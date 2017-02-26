@@ -10,36 +10,9 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# WM Management
-#super + {0-9}
-#	workspace -g {0-9}
-
-#shift + super + {0-9}
-#	workspace -m {0-9}
-
-#super + p
-#	dmenu_run
-
-#shift + super + l
-#	xautolock -locknow
-
-#super + {h,j,k,l}
-#	closest {h,j,k,l}
-
-#super + {Left,Up,Down,Right}
-#	wmv {-10 0,0 -10,0 10,10 0} $(pfw)
-
-#shift + super + {Left,Up,Down,Right}
-#	wrs {-10 0,0 -10,0 10,10 0} $(pfw)
-
-#super + f
-	fullscreen $(pfw)
-
-#shift + super + k
-#	killw $(pfw)
-
-#shift + super + Return
-#	st -f Go\ Mono:size=10
+#
+# Global
+#
 
 # (in|de)crease volume
 XF86Audio{Raise,Lower}Volume
@@ -55,7 +28,7 @@ XF86MonBrightness{Up,Down}
 
 # Power Control Menu
 ctrl + alt + p
-	9menu -teleport -popup -label Power\ Control Shutdown:doas\ poweroff Reboot:doas\ reboot Suspend:doas\ zzz exit
+	9menu -teleport -popup -label Power\ Control Shutdown:doas\ /usr/bin/poweroff Reboot:doas\ /usr/bin/reboot Suspend:doas\ /usr/bin/zzz exit
 
 # GIMP
 ctrl + alt + g
@@ -86,3 +59,37 @@ Print
 
 shift + Print
 	escrotum -s ~/Pictures/screenshots/Screenshot\ from\ %Y-%m-%d\ %H-%M-%S.png
+
+#
+# WM
+#
+
+super + p
+	dmenu_run
+
+shift + super + Return
+	st -f Go\ Mono:size=10
+
+shift + super + l
+	xautolock -locknow
+
+{_,shift +} super + {1-4}
+	workspace.sh -{g,m} {1-4}
+
+super + {h,j,k,l}
+	closest.sh {h,j,k,l}
+
+super + f
+	fullscreen.sh $(pfw)
+
+super + {Left,Up,Down,Right}
+	wmv {-10 0,0 -10,0 10,10 0} $(pfw)
+
+shift + super + {Left,Up,Down,Right}
+	wrs {-10 0,0 -10,0 10,10 0} $(pfw)
+
+super + t
+	tile.sh
+
+shift + super + k
+	killw $(pfw)

@@ -1,4 +1,4 @@
--- Copyright 2006-2016 Mitchell mitchell.att.foicica.com. See LICENSE.
+-- Copyright 2006-2017 Mitchell mitchell.att.foicica.com. See LICENSE.
 -- Markdown LPeg lexer.
 
 local l = require('lexer')
@@ -91,7 +91,7 @@ M._tokenstyles = {
   h2 = hstyle..',size:'..(font_size + 4),
   h1 = hstyle..',size:'..(font_size + 5),
   code = l.STYLE_EMBEDDED..',eolfilled',
-  hr = 'back:black,eolfilled',
+  hr = l.STYLE_DEFAULT..',bold',
   link = 'underlined',
   link_url = 'underlined',
   link_label = l.STYLE_LABEL,

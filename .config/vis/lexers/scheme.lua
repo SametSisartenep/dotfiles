@@ -1,4 +1,4 @@
--- Copyright 2006-2016 Mitchell mitchell.att.foicica.com. See LICENSE.
+-- Copyright 2006-2017 Mitchell mitchell.att.foicica.com. See LICENSE.
 -- Scheme LPeg lexer.
 
 local l = require('lexer')
@@ -81,6 +81,7 @@ local entity = token('entity', '&' * word)
 M._rules = {
   {'whitespace', ws},
   {'keyword', keyword},
+  {'func', func},
   {'identifier', identifier},
   {'string', string},
   {'comment', comment},

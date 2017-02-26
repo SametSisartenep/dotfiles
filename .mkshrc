@@ -36,8 +36,7 @@ bin2hex() {
 }
 
 # Aliases
-alias ls='ls --color=tty'
-alias lc='lc -QF'
+alias ls='ls -1AF'
 alias grep='grep --color'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -48,7 +47,7 @@ alias rmwarn='rm -rfvi'
 alias rmsec='bleachbit -s'
 alias rmsec2='shred -uv'
 alias as='as --warn --statistics'
-alias memcheck='valgrind --leak-check=full -v'
+alias memcheck='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -v'
 alias hd='od -Ax -tx1z -v' # Thanks Matt!
 alias jobs='jobs -l'
 alias zat='jail zathura'
@@ -56,12 +55,9 @@ alias sxiv='jail sxiv'
 alias mpv='jail mpv'
 alias get_window_geometry="xwininfo -id $(xprop -root 2> /dev/null | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
 
-# GnuPG
-GPG_TTY=$(tty)
-
-#  Docker
-## Remove exited containers
-alias dockrec='docker ps -a -f status=exited -q | xargs -r docker rm -v'
+lc() {
+	ls $@ | mc
+}
 
 # Dircolors setup
 eval $(dircolors -b ~/.dircolors)

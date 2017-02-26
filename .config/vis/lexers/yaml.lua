@@ -1,4 +1,4 @@
--- Copyright 2006-2016 Mitchell mitchell.att.foicica.com. See LICENSE.
+-- Copyright 2006-2017 Mitchell mitchell.att.foicica.com. See LICENSE.
 -- YAML LPeg lexer.
 -- It does not keep track of indentation perfectly.
 
@@ -102,7 +102,7 @@ M._rules = {
 }
 
 M._tokenstyles = {
-  indent_error = 'back:%(color.red)',
+  indent_error = 'back:red',
   document = l.STYLE_CONSTANT,
   literal = l.STYLE_DEFAULT,
   timestamp = l.STYLE_NUMBER,

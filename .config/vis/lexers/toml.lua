@@ -1,4 +1,4 @@
--- Copyright 2015-2016 Alejandro Baez (https://keybase.io/baez). See LICENSE.
+-- Copyright 2015-2017 Alejandro Baez (https://keybase.io/baez). See LICENSE.
 -- TOML LPeg lexer.
 
 local l = require("lexer")
@@ -59,7 +59,7 @@ M._rules = {
 }
 
 M._tokenstyles = {
-  indent_error = 'back:%(color.red)',
+  indent_error = 'back:red',
   timestamp = l.STYLE_NUMBER,
 }
 
